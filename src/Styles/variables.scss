@@ -1,0 +1,22 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centerc {
+  @include center;
+  align-items: center;
+}
+
+@mixin px($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+
+$dark: gainsboro;
+$light: white;
+
+$padding-banners: 4em;
+
+$char-normal: 1rem;

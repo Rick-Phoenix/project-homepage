@@ -1,12 +1,13 @@
 {
-  "name": "template-repo",
+  "name": "project-homepage",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-     "predeploy": "npx webpack && (git rev-parse --verify gh-pages && git checkout gh-pages || git checkout --orphan gh-pages) && git merge main --no-edit",
-    "deploy": "git add dist -f && git commit -m 'Deployment Commit' && git subtree push --prefix dist origin gh-pages && git checkout main"
-    },
+    "predeploy": "webpack && (git rev-parse --verify gh-pages && git checkout gh-pages || git checkout --orphan gh-pages) && git merge main --no-edit",
+    "deploy": "git add dist -f && git commit -m 'Deployment Commit' && git subtree push --prefix dist origin gh-pages && git checkout main",
+    "start": "webpack serve"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,6 +17,8 @@
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
+    "sass": "^1.80.5",
+    "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",

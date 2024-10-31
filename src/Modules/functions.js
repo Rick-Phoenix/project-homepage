@@ -5,12 +5,12 @@ export function createElement(type, ...classes) {
   return newElement;
 }
 
-function getImages(index) {
-  let images = {};
-  index.keys().forEach((key) => {
-    images[key.replace('../', '')] = index(key)
-  })
-  console.log(images);
-}
+// function getImages(index) {
+//   let images = {};
+//   index.keys().forEach((key) => {
+//     images[key.replace('../', '')] = index(key)
+//   })
+//   console.log(images);
+// }
 
-const images = require.context('./Images', false, /\.(png|jpe?g|svg)$/);
+// const images = require.context('./Images', false, /\.(png|jpe?g|svg)$/);

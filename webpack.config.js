@@ -14,7 +14,15 @@ module.exports = {
 
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/template.html"],
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
+    watchFiles: [
+      path.join(__dirname, 'src', 'template.html'), 
+      path.join(__dirname, 'src', 'styles', '**/*.scss')
+    ],
+    compress: true,
+    hot: true,
   },
 
   plugins: [
@@ -26,8 +34,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.scss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
 
       {
