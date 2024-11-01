@@ -19,10 +19,18 @@ header {
 
     a {
       font-size: max(25px, 4vw);
+      color: rgb(67, 67, 67);
+      transition: transform 0.5s;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        animation: float 2s ease  infinite alternate forwards;
+      }
     }
 
     div.title {
-      background: linear-gradient(90deg, white 50%, #ffd43d);
+      background: linear-gradient(90deg, white 50%, #f8dc77);
       background-clip: text;
       background-size: 500%;
       background-position: left;

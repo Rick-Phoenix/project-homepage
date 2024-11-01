@@ -3,3 +3,9 @@
     background-position: right;
   }
 }
+
+@keyframes float {
+  to {
+    transform: translateY(-5px);
+    }
+}

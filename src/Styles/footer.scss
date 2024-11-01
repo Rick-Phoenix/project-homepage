@@ -1,0 +1,16 @@
+@use 'variables' as *;
+@use 'animations' as *;
+
+footer {
+  background-color: $dark; 
+  margin-top: 2em;
+  @include centerc;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  text-align: center;
+
+  .icon {
+    width: 30%;
+  }
+}
