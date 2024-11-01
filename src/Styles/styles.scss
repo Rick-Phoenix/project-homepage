@@ -1,14 +1,29 @@
 @use 'variables' as *;
+@use 'header';
+@use 'main';
 
 @font-face {
   font-family: 'Inter';
   src: url(../Fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 
+@font-face {
+  font-family: 'Saiba';
+  src: url('../Fonts/saiba-45.regular.ttf');
+}
+
+// @media (max-width: 500px) {
+//   header {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
+
 body {
   box-sizing: border-box;
   font-family: 'Inter';
   margin: 0;
+  min-height: 100vh;
 }
 
 * {
@@ -18,45 +33,15 @@ body {
 html {
 }
 
-header {
-  background: linear-gradient(to bottom, $dark 50%, $light 50%);
-  @include px(4em);
-  @include centerc;
-  gap: 1em;
+footer {
+  background-color: $dark; 
+  height: 100px;
+  margin-top: 2em;
 }
 
-@media (max-width: 500px) {
-  header {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-main {
-  @include center;
-  flex-direction: column;
-  align-items: center;
-}
-
-div.intro {
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-div.text {
-  
-}
-
-.pic {
-  // width: clamp(30vw, 200px ,200px);
-  width: min(40vw, 200px);
-  aspect-ratio: 1;
-  background-color: wheat;
-}

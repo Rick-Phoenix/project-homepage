@@ -1,0 +1,55 @@
+@use 'variables' as *;
+@use 'animations' as *;
+
+header {
+  background: linear-gradient(to bottom, $dark 50%, $light 50%);
+  @include px(4em);
+  @include centerc;
+  gap: 3%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  div.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    font-size: max(30px, 5vw);
+    font-family: 'Saiba';
+
+    a {
+      font-size: max(25px, 4vw);
+    }
+
+    div.title {
+      background: linear-gradient(90deg, white 50%, #ffd43d);
+      background-clip: text;
+      background-size: 500%;
+      background-position: left;
+      color: transparent;
+      width: max-content;
+      animation: flow 7s infinite alternate;
+    }
+  }
+
+  .avatar {
+    padding: 10px;
+    border-radius: 5px;
+    width: min(40vw, 200px);
+    --angle: 180;
+    background: linear-gradient(calc(var(--angle) * 1deg), transparent 50%, $dark 50.5%),
+    white;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
